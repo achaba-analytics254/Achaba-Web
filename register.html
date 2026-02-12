@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Account-Registration">
+    <!-- Preloading Critical Resources-->
+    <link rel="preload" href="register.css" as="style">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style">
+    <link rel="preload" href="register.js" as="script">
+    <!-- Font Awesome with async loading-->
+    <script src="https://kit.fontawesome.com/1ca5926459.js" crossorigin="anonymous" async></script>
+    <!-- Google fonts with swap display-->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet'>
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Achaba Analytics</div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+            aria-controls="nav-links">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="nav-links" aria-label="main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="register" id="registerForm">
+        <div class="form-header">
+            <button class="close-form" id="closeRegisterForm" aria-label="close contact form">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Register</h2>
+            <p>Complete this form to create your account</p>
+        </div>
+        <form id="registerForm" action="/" method="POST" novalidate>
+            <div class="form-message" id="form-message" role="alert" aria-live="polite"></div>
+
+            <div class="register-form">
+                <label for="name">First Name <span class="asterix">*</span></label>
+                <input type="text" id="firstName" name="name" required placeholder="First Name" aria-required="true">
+                <div class="error-message" id="name-error" aria-live="polite"></div>
+            </div>
+            <div class="register-form">
+                <label for="name">Last Name <span class="asterix">*</span></label>
+                <input type="text" id="lastName" name="name" required placeholder="Last Name" aria-required="true">
+                <div class="error-message" id="name-error" aria-live="polite"></div>
+            </div>
+
+            <div class="register-form">
+                <label for="email">Email <span class="asterix">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Email" aria-required="true">
+                <div class="error-message" id="email-error" aria-live="polite"></div>
+            </div>
+
+            <div class="register-form">
+                <label for="password">Password <span class="asterix">*</span></label>
+                <input type="password" id="password1" name="password" required placeholder="Password"
+                    aria-required="true">
+                <div class="error-message" id="password-error" aria-live="polite"></div>
+            </div>
+
+            <div class="register-form">
+                <label for="password">Password <span class="asterix">*</span></label>
+                <input type="password" id="email" name="password" required placeholder="Repeat password"
+                    aria-required="true">
+                <div class="error-message" id="password-error" aria-live="polite"></div>
+            </div>
+
+            <div class="register-button">
+                <button type="submit" class="register-btn" id="registerBtn">Submit</button>
+            </div>
+            <div class="login">
+                <p>Have an Account? <a href="login.html">Login</a></p>
+            </div>
+
+            <div class="register-policy">
+                <p>By clicking "Submit" button, I expressly agree to Achaba Analytics <a href="/terms"
+                        target="_blank">Terms
+                        of Service</a> and understand that my account information will be used according to
+                    Achaba Analytics <a href="/privacy" target="_blank">Privacy Policy</a></p>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <footer class="main-footer" aria-label="Site footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Achaba Analytics</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com" aria-label="Visit our LinkedIn profile" target="_blank"
+                        rel="noopener">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" aria-label="Visit our Twitter profile" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://facebook.com" aria-label="Visit our Facebook page" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html" id="home">Home</a></li>
+                    <li><a href="#services" id="services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="quick-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="bottom-footer">
+            <p>&copy; <span id="current-year">2026</span> DJANGOZ ENTERPRISE | All Rights Reserved</p>
+            <p class="footer-links">
+                <a href="/sitemap">Sitemap</a> |
+                <a href="/accessibility">Accessibility</a> |
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="register.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

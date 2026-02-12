@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Achaba Analytics - Your Data Companion">
+    <!-- Preloading Critical Resources-->
+    <link rel="preload" href="style.css.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style">
+    <link rel="preload" href="main.js" as="script">
+    <!-- Font Awesome with async loading-->
+    <script src="https://kit.fontawesome.com/1ca5926459.js" crossorigin="anonymous" async></script>
+    <!-- Google fonts with swap display-->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet'>
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <title>Achaba Analytics - Your Data Companion</title>
+</head>
+
+<body>
+
+    <!-- skip for keyboard users to improve efficiency and accessibility-->
+    <a href="#mainContent" class="skip-link" aria-label="skip to main content">Skip to main content</a>
+
+    <header class="header">
+        <div class="logo">Achaba Analytics</div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="nav-links" aria-label="main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+            <div class="text-content">
+                <h1 class="hero-headin">Analytical Insights That Drive<span class="hero-span"> Business Growth</span>
+                </h1>
+                <p>Transformng complex data into clear, actionable strategies that move your business forward.</p>
+                <div class="hero-btn">
+                    <button class="main-cta" id="ctaBtn">Get Started</button>
+                    <button class="contact-cta" id="openModal">Contact Us <i class="fa-solid fa-phone-flip"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="contact-modal" id="contact-form" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+            aria-describedby="modal-description" hidden>
+            <div class="modal-form" role="document">
+                <button class="modal-close" id="close-form" aria-label="close contact form">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="form-header">
+                    <h2 class="modal-title">Contact Us</h2>
+                    <p id="modal-description">Please fill this form to send us a message</p>
+                </div>
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <div class="form-message" id="form-message" role="alert" aria-live="polite"></div>
+
+                    <input type="hidden" name="access_key" value="63f68dea-a60c-43a8-9d29-cd5347d227e6">
+
+                    <div class="form-group">
+                        <label for="name">Name <span class="asterix">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Full name" aria-required="true">
+                        <div class="error-message" id="name-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="asterix">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="Email" aria-required="true">
+                        <div class="error-message" id="email-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="asterix">*</span></label>
+                        <textarea id="message" name="message" required class="textarea"
+                            placeholder="Enter your message here" aria-required="true"></textarea>
+                        <div class="error-message" id="message-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-btn" >
+                        <button type="submit" class="submit-btn" id="contactBtn">Send Message</button>
+                    </div>
+
+                    <div class="privacy-policy">
+                        <p>By clicking "Send Message" button, I expressly agree to Achaba Analytics <a href="/terms"
+                                target="_blank">Terms
+                                of Service</a> and understand that my account information will be used according to
+                            Achaba Analytics <a href="/privacy" target="_blank">Privacy Policy</a></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <section id="explore" class="services-section" aria-labelledby="services-heading">
+            <div class="top">
+                <p class="top-p" id="services">Our Expertise</p>
+                <h3 id="services-heading">Data Analytics and trusted intelligence for confident decisions.</h3>
+            </div>
+            <div class="main-cards">
+                <article class="card-container">
+                    <img src="Actionable-Insights.jpg"
+                        alt="Web design illustration showing a laptop with creative interface" loading="lazy"
+                        width="400" height="200">
+                    <h3>Actionable Insights</h3>
+                    <p>Go beyond raw data with analytics that uncover meaningful patterns and trends. Turn complex
+                        information into clear, actionable insights that help teams focus on what truly drives
+                        performance.
+                    </p>
+                    <button aria-label="Learn more about Actionable Insights">Learn More <i
+                            class="fa-solid fa-square-arrow-up-right"></i></button>
+                </article>
+                <article class="card-container">
+                    <img src="Scalable-Growth.jpg" alt="Cybersecurity illustration showing shield protection"
+                        loading="lazy" width="400" height="200">
+                    <h3>Scalable Growth</h3>
+                    <p>Identify growth opportunities with data solutions designed to scale alongside your business. From
+                        optimizing operations to unlocking new revenue streams, our insights support sustainable,
+                        long-term
+                        expansion.
+                    </p>
+                    <button aria-label="Learn more about Scalable Growth">Learn More <i
+                            class="fa-solid fa-square-arrow-up-right"></i></button>
+                </article>
+                <article class="card-container">
+                    <img src="Confident-Decisions.jpg" alt="Graphic design illustration showing creative tools"
+                        loading="lazy" width="400" height="200">
+                    <h3>Confident Decisions</h3>
+                    <p>Make informed decisions with accurate, real time analytics you can trust. Reduce uncertainty,
+                        minimize risk, and move forward with confidence using data that supports every strategic move.
+                    </p>
+                    <button aria-label="Learn more about Confident Decisions">Learn More <i
+                            class="fa-solid fa-square-arrow-up-right"></i></button>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-section" aria-labelledby="Quantitative-insights">
+            <div class="info-text">
+                <h3 id="Quantitative-insights">Quantitative insights fueling <span>innovation for modern
+                        businesses.</span>
+                </h3>
+                <p> We support forward thinking businesses by delivering innovative ideas grounded in data and
+                    strategic insight. We help organizations identify opportunities by solving complex challenges, and
+                    driving
+                    growth through thoughtful, creative solutions. By combining analytical thinking with a passion for
+                    innovation, we empower businesses to stay ahead in a competitive landscape</p>
+                <button class="get-started" aria-label="Get started with Achaba Analytics">Get Started</button>
+            </div>
+            <div class="info-image">
+                <img src="info-section.png" alt="Visual representation of business innovation and growth" loading="lazy"
+                    width="500" height="300">
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer" aria-label="Site footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Achaba Analytics</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com" aria-label="Visit our LinkedIn profile" target="_blank"
+                        rel="noopener">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" aria-label="Visit our Twitter profile" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://facebook.com" aria-label="Visit our Facebook page" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home" id="home">Home</a></li>
+                    <li><a href="#services" id="services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="quick-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="newsletter">
+            <h5>Stay in the Loop</h5>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email" aria-label="Subscribe to newsletter">
+                <button type="submit" aria-label="Subscribe">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="bottom-footer">
+            <p>&copy; <span id="current-year">2026</span> DJANGOZ ENTERPRISE | All Rights Reserved</p>
+            <p class="footer-links">
+                <a href="/sitemap">Sitemap</a> |
+                <a href="/accessibility">Accessibility</a> |
+                <a href="/contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
