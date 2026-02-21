@@ -1,0 +1,31 @@
+# Normalize all text files to LF in repo
+* text=auto eol=lf
+
+# Explicit text files
+*.html text
+*.css text
+*.js text
+*.json text
+*.md text
+*.svg text
+
+# Shell scripts (force LF)
+*.sh text eol=lf
+
+# Images (binary)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+
+# Fonts (binary)
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
+# Prevent accidental diff noise in minified files
+*.min.js -diff
+*.min.css -diff

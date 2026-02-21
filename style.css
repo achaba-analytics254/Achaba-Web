@@ -78,6 +78,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 1000;
+    will-change: transform;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
@@ -139,7 +140,7 @@ body{
 /*---------Hero-Section---------------*/
 .hero-section{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('data-driven.jpg') center/cover no-repeat;
+    url('./images/data-driven.jpg') center/cover no-repeat;
     min-height: 80vh;
     display: flex;
     justify-content: center;
